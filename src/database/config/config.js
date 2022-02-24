@@ -1,6 +1,9 @@
-require("dotenv").config();
+/* eslint-disable import/prefer-default-export */
+import dotenv from "dotenv";
 
-module.exports = {
+dotenv.config();
+
+export const envsConfig = {
   development: {
     url: process.env.DEV_DATABASE_URL,
     dialect: "postgres",

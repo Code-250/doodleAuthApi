@@ -1,13 +1,13 @@
-const express = require("express");
-const session = require("express-session");
-const passport = require("passport");
-const bodyParser = require("body-parser");
-const userLogin = require("./controller/user");
-const ProfileController = require("./controller/profile");
-
-require("./middleware/auth");
+import express from "express";
+import session from "express-session";
+import passport from "passport";
+import bodyParser from "body-parser";
+import userLogin from "./controller/user";
+import ProfileController from "./controller/profile";
+import "./middleware/auth";
 
 function isLoggedIn(req, res, next) {
+  // eslint-disable-next-line no-unused-expressions
   req.user ? next() : res.sendStatus(401);
 }
 

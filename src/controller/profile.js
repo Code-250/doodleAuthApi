@@ -1,4 +1,5 @@
-const db = require("../database/models");
+/* eslint-disable consistent-return */
+import db from "../database/models/index";
 
 const { Profile } = db;
 
@@ -20,4 +21,4 @@ class ProfileController {
   }
 }
 
-module.exports = ProfileController;
+export default ProfileController;
